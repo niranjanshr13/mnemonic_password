@@ -1,8 +1,10 @@
 #!/usr/bin/env python3
 import random
+import sys
 
 # wordlist fixing
 f = open('english.txt','r').read()
+wordlen = sys.argv[1]
 wordlist = []
 
 for x in f.split('\n'):
@@ -16,7 +18,7 @@ phrase += frstRandom
 numberLoop = 0
 
 while True:
-    if numberLoop == 15:
+    if numberLoop == wordlen:
         print(numberLoop)
         print(phrase)
         break
